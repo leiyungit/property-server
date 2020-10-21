@@ -1,0 +1,13 @@
+前端：
+	需要安装 npm install qs -save
+
+
+
+
+
+后端项目名称：family_service_platform
+springboot 选项：1、Developer Tools -> Spring Boot DevTools
+	           2、Web -> Spring Web
+	           3、SQL -> MyVatis Framework
+		       -> MySQL Driver
+创建数据库： CREATE DATABASE  `family_service_platform` DEFAULT CHARACTER SET UTF8 COLLATE UTF8_UNICODE_CI;
