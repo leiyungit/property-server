@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblMainMenu;
 import com.msb.mapper.TblMainMenuMapper;
-import com.msb.service.TblMainMenuService;
+import com.msb.service.base.TblMainMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

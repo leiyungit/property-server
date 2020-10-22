@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.ZhCsHandleSpeed;
 import com.msb.mapper.ZhCsHandleSpeedMapper;
-import com.msb.service.ZhCsHandleSpeedService;
+import com.msb.service.base.ZhCsHandleSpeedService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

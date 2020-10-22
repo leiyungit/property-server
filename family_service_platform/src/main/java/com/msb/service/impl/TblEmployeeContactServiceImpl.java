@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblEmployeeContact;
 import com.msb.mapper.TblEmployeeContactMapper;
-import com.msb.service.TblEmployeeContactService;
+import com.msb.service.base.TblEmployeeContactService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

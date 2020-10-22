@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblEnvirSetting;
 import com.msb.mapper.TblEnvirSettingMapper;
-import com.msb.service.TblEnvirSettingService;
+import com.msb.service.base.TblEnvirSettingService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

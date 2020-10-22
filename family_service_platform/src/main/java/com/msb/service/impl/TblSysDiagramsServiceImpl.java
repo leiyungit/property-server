@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblSysDiagrams;
 import com.msb.mapper.TblSysDiagramsMapper;
-import com.msb.service.TblSysDiagramsService;
+import com.msb.service.base.TblSysDiagramsService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

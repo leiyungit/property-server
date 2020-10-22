@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblDeptkey;
 import com.msb.mapper.TblDeptkeyMapper;
-import com.msb.service.TblDeptkeyService;
+import com.msb.service.base.TblDeptkeyService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblDashboard;
 import com.msb.mapper.TblDashboardMapper;
-import com.msb.service.TblDashboardService;
+import com.msb.service.base.TblDashboardService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

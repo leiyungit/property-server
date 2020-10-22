@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.ZhConsumerComplain;
 import com.msb.mapper.ZhConsumerComplainMapper;
-import com.msb.service.ZhConsumerComplainService;
+import com.msb.service.base.ZhConsumerComplainService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

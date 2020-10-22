@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.FyReceiptMain;
 import com.msb.mapper.FyReceiptMainMapper;
-import com.msb.service.FyReceiptMainService;
+import com.msb.service.base.FyReceiptMainService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

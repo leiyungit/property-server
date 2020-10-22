@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblPrintPaper;
 import com.msb.mapper.TblPrintPaperMapper;
-import com.msb.service.TblPrintPaperService;
+import com.msb.service.base.TblPrintPaperService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.WyTakeoverDataDetail;
 import com.msb.mapper.WyTakeoverDataDetailMapper;
-import com.msb.service.WyTakeoverDataDetailService;
+import com.msb.service.base.WyTakeoverDataDetailService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblComparyNotice;
 import com.msb.mapper.TblComparyNoticeMapper;
-import com.msb.service.TblComparyNoticeService;
+import com.msb.service.base.TblComparyNoticeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

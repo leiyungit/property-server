@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblTodo;
 import com.msb.mapper.TblTodoMapper;
-import com.msb.service.TblTodoService;
+import com.msb.service.base.TblTodoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

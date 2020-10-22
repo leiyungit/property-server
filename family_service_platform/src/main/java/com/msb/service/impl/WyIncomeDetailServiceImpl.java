@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.WyIncomeDetail;
 import com.msb.mapper.WyIncomeDetailMapper;
-import com.msb.service.WyIncomeDetailService;
+import com.msb.service.base.WyIncomeDetailService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

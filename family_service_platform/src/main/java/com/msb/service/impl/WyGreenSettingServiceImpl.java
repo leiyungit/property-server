@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.WyGreenSetting;
 import com.msb.mapper.WyGreenSettingMapper;
-import com.msb.service.WyGreenSettingService;
+import com.msb.service.base.WyGreenSettingService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

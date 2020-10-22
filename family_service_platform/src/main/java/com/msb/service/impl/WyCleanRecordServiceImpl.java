@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.WyCleanRecord;
 import com.msb.mapper.WyCleanRecordMapper;
-import com.msb.service.WyCleanRecordService;
+import com.msb.service.base.WyCleanRecordService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

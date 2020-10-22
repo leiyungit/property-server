@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.FySaleContract;
 import com.msb.mapper.FySaleContractMapper;
-import com.msb.service.FySaleContractService;
+import com.msb.service.base.FySaleContractService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

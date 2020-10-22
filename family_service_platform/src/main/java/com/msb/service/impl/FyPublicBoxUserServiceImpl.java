@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.FyPublicBoxUser;
 import com.msb.mapper.FyPublicBoxUserMapper;
-import com.msb.service.FyPublicBoxUserService;
+import com.msb.service.base.FyPublicBoxUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

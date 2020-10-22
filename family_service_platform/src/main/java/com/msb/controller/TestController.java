@@ -8,6 +8,7 @@ import java.util.Map;
 
 
 @RestController // 等于  @Controller+@ResponseBody
+@RequestMapping("/test")
 // 设置允许跨域请求
 //@CrossOrigin(origins = "*",allowedHeaders = "*",methods = {},allowCredentials = "true")
 public class TestController {
@@ -19,7 +20,15 @@ public class TestController {
     }
 
     @RequestMapping("/auth/login")
-    public String login(@RequestBody Map<String,Object> map){
+    public String login(@RequestParam("username") String username, @RequestParam("password") String password){
+        System.out.println("login...");
+        //System.out.println(String.format("username={0},password={1}",username,password));
+        System.out.println(String.format(username +" ---- "+password));
+        return "test:测试页面输出通过"+username;
+    }
+
+    @RequestMapping("/auth/login2")
+    public String login2(@RequestBody Map<String,Object> map){
         //System.out.println(String.format("username={0},password={1}",map.get("username"),map.get("password")));
         System.out.println(map);
         return "test:测试页面输出通过";

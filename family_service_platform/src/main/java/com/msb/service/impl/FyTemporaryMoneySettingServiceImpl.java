@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.FyTemporaryMoneySetting;
 import com.msb.mapper.FyTemporaryMoneySettingMapper;
-import com.msb.service.FyTemporaryMoneySettingService;
+import com.msb.service.base.FyTemporaryMoneySettingService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

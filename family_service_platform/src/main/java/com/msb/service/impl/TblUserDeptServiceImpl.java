@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblUserDept;
 import com.msb.mapper.TblUserDeptMapper;
-import com.msb.service.TblUserDeptService;
+import com.msb.service.base.TblUserDeptService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

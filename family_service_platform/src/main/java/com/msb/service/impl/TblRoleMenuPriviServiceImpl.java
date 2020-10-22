@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblRoleMenuPrivi;
 import com.msb.mapper.TblRoleMenuPriviMapper;
-import com.msb.service.TblRoleMenuPriviService;
+import com.msb.service.base.TblRoleMenuPriviService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

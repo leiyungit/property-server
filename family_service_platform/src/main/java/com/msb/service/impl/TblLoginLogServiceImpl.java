@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblLoginLog;
 import com.msb.mapper.TblLoginLogMapper;
-import com.msb.service.TblLoginLogService;
+import com.msb.service.base.TblLoginLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

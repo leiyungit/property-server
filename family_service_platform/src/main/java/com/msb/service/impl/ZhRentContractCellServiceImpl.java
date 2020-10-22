@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.ZhRentContractCell;
 import com.msb.mapper.ZhRentContractCellMapper;
-import com.msb.service.ZhRentContractCellService;
+import com.msb.service.base.ZhRentContractCellService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

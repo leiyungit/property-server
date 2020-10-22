@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblGroupRecord;
 import com.msb.mapper.TblGroupRecordMapper;
-import com.msb.service.TblGroupRecordService;
+import com.msb.service.base.TblGroupRecordService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

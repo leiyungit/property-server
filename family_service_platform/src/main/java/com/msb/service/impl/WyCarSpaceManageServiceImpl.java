@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.WyCarSpaceManage;
 import com.msb.mapper.WyCarSpaceManageMapper;
-import com.msb.service.WyCarSpaceManageService;
+import com.msb.service.base.WyCarSpaceManageService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

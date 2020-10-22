@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.WyDutyManage;
 import com.msb.mapper.WyDutyManageMapper;
-import com.msb.service.WyDutyManageService;
+import com.msb.service.base.WyDutyManageService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

@@ -22,11 +22,11 @@ public class TestGenerator {
         // 设置输出路径，也可以使用本地磁盘全路径
         gc.setOutputDir(projectPath + projectName + "/src/main/java");
         gc.setAuthor("leiy") // 作者
-                .setFileOverride(true) // 文件覆盖
+                .setFileOverride(false) // 文件覆盖
                 .setIdType(IdType.AUTO) // 设置主键生成策略
                 .setServiceName("%sService")  // 接口名称 例如：%sBusinessImpl 生成 UserBusinessImpl
-                //.setBaseResultMap(true) // 基本结果集合
-                //.setBaseColumnList(true) // 设置基本列
+                .setBaseResultMap(true) // 基本结果集合  mapper.xml
+                .setBaseColumnList(true) // 设置基本列  mapper.xml
                 .setControllerName("%sController"); // 控制器名称 例如：%sAction 生成 UserAction
 
         // 数据源配置

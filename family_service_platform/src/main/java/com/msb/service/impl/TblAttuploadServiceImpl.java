@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblAttupload;
 import com.msb.mapper.TblAttuploadMapper;
-import com.msb.service.TblAttuploadService;
+import com.msb.service.base.TblAttuploadService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

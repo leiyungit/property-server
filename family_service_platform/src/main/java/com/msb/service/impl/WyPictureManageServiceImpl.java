@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.WyPictureManage;
 import com.msb.mapper.WyPictureManageMapper;
-import com.msb.service.WyPictureManageService;
+import com.msb.service.base.WyPictureManageService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

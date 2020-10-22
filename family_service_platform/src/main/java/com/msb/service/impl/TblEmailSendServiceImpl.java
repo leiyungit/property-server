@@ -2,7 +2,7 @@ package com.msb.service.impl;
 
 import com.msb.bean.TblEmailSend;
 import com.msb.mapper.TblEmailSendMapper;
-import com.msb.service.TblEmailSendService;
+import com.msb.service.base.TblEmailSendService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
