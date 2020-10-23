@@ -148,6 +148,15 @@ public class TblUserRecord implements Serializable {
      */
     private LocalDateTime createDate;
 
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public Integer getId() {
         return id;
@@ -391,6 +400,7 @@ public class TblUserRecord implements Serializable {
                 ", lastLoginDate=" + lastLoginDate +
                 ", createPerson='" + createPerson + '\'' +
                 ", createDate=" + createDate +
+                ", token='" + token + '\'' +
                 '}';
     }
 }

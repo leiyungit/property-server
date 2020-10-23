@@ -18,7 +18,7 @@ public class CorsConfig {
         corsConfiguration.addAllowedHeader("*");
         // 配置跨越的请求方法
         corsConfiguration.addAllowedMethod("*");
-        // 表示跨越请求的时候是否使用的是同一个session
+        // 表示跨越请求的时候是否使用的是同一个session, 前端也需要另外的设置 跨域访问需要发送cookie时一定要加axios.defaults.withCredentials = true;
         corsConfiguration.setAllowCredentials(true);
         return corsConfiguration;
     }
