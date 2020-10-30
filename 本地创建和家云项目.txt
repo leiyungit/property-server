@@ -1,5 +1,5 @@
 前端：
-	需要安装 npm install qs -save
+	--需要安装 npm install qs -save，结果发现已经安装过了
 
 
 

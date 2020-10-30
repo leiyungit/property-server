@@ -13,6 +13,11 @@ public class ResultObject {
         this.result = result;
     }
 
+    public ResultObject(String message, Object result) {
+        this.message = message;
+        this.result = result;
+    }
+
     public Integer getCode() {
         return code;
     }

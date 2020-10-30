@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController // 等于  @Controller+@ResponseBody
 @RequestMapping("/test")
 // 设置允许跨域请求
-//@CrossOrigin(origins = "*",allowedHeaders = "*",methods = {},allowCredentials = "true")
+@CrossOrigin(origins = "*",allowedHeaders = "*",methods = {},allowCredentials = "true")
 public class TestController {
 
     @RequestMapping("/test")
