@@ -124,7 +124,8 @@ public class FcEstate implements Serializable {
      */
     private String remark;
 
-    /**
+    /**                company: [],
+
      * 所属公司
      */
     private String company;
