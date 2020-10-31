@@ -97,6 +97,12 @@
                     <include>**/*.xml</include>
                 </includes>
             </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.yaml</include>
+                </includes>
+            </resource>
         </resources>
     </build>
 

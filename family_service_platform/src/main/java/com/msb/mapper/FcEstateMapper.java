@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.msb.bean.FcEstate;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -18,6 +19,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author leiy
  * @since 2020-10-21
  */
+@Component
 public interface FcEstateMapper extends BaseMapper<FcEstate> {
 
 
