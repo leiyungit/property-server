@@ -72,8 +72,8 @@ public class EstateController {
         for (FcBuilding fcBuilding : fcBuildings) {
             System.out.println(fcBuilding);
         }
-        return JSON.toJSONString(new ResultObject(0));
-        //return JSON.toJSONString(new ResultObject(service.updateBatchBuilding(fcBuildings)));
+        //return JSON.toJSONString(new ResultObject(0));
+        return JSON.toJSONString(new ResultObject(service.updateBatchBuilding(fcBuildings)));
     }
 
 }
