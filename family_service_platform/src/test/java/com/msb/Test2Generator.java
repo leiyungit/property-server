@@ -18,7 +18,7 @@ class Test2Generator {
         //全局配置
         GlobalConfig globalConfig = new GlobalConfig();
         globalConfig.setAuthor("leiy")
-                .setOutputDir("C:\\Users\\v_yunylei\\Desktop\\My\\gitspace\\JavaDemo\\property-server\\family_service_platform\\src\\main\\java")//设置输出路径
+                //.setOutputDir("C:\\Users\\v_yunylei\\Desktop\\My\\gitspace\\JavaDemo\\property-server\\family_service_platform\\src\\main\\java")//设置输出路径
                 .setFileOverride(false)//设置文件覆盖
                 .setIdType(IdType.AUTO)//设置主键生成策略
                 .setServiceName("%sService")//service接口的名称
