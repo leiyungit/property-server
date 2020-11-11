@@ -6,6 +6,7 @@ import com.msb.bean.FcBuilding;
 import com.msb.bean.FcEstate;
 import com.msb.resultJson.ResultObject;
 import com.msb.service.EstateService;
+import com.msb.vo.UnitMessage;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -74,6 +75,12 @@ public class EstateController {
         }
         //return JSON.toJSONString(new ResultObject(0));
         return JSON.toJSONString(new ResultObject(service.updateBatchBuilding(fcBuildings)));
+    }
+
+    @RequestMapping("/selectUnit")
+    public String selectUnit(@RequestBody UnitMessage[] unitMessages){
+        System.out.println("selectUnit..........");
+        return JSON.toJSONString(new ResultObject(service.selectUnit(unitMessages)));
     }
 
 }
