@@ -76,7 +76,7 @@ INSERT INTO `fc_building` VALUES (5, '22', 'B5', '第3号楼', NULL, NULL, NULL,
 DROP TABLE IF EXISTS `fc_cell`;
 CREATE TABLE `fc_cell`  (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '房间编号',
-  `unit_code` int(11) NULL DEFAULT NULL COMMENT '单元编码',
+  `unit_code` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '单元编码',
   `cell_code` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '房间编码',
   `cell_name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '房间名称',
   `cell_house_code` varchar(4) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '户型编码',
