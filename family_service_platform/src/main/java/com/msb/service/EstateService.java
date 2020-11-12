@@ -52,7 +52,7 @@ public class EstateService {
         return fcEstateMapper.selectList(queryWrapper);
     }
 
-    public List<FcBuilding> selectBuilding(Integer buildingNumber, String estateCode){
+    public List<FcBuilding> selectInsertBuilding(Integer buildingNumber, String estateCode){
         List<FcBuilding> list = new ArrayList<>();
         FcBuilding fcBuilding;
         for (Integer i = 0; i < buildingNumber; i++) {
@@ -63,6 +63,13 @@ public class EstateService {
             fcBuildingMapper.insert(fcBuilding);
             list.add(fcBuilding);
         }
+        return list;
+    }
+
+    public List<FcBuilding> findBuildingByEstateCode(String estateCode){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("estate_code", estateCode);
+        List<FcBuilding> list = fcBuildingMapper.selectList(queryWrapper);
         return list;
     }
 

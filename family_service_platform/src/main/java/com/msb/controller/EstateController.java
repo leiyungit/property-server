@@ -57,9 +57,17 @@ public class EstateController {
      * @return
      */
     @RequestMapping("/selectBuilding")
-    public String selectBuilding(Integer buildingNumber,  String estateCode){
+    public String selectInsertBuilding(Integer buildingNumber,  String estateCode){
         System.out.println("estate selectBuilding");
-        List<FcBuilding> fcBuildings = service.selectBuilding(buildingNumber, estateCode);
+        List<FcBuilding> fcBuildings = service.selectInsertBuilding(buildingNumber, estateCode);
+        System.out.println(fcBuildings);
+        return JSON.toJSONString(new ResultObject(fcBuildings));
+    }
+
+    @RequestMapping("/selectBuilding")
+    public String findBuildingByEstateCode(String estateCode){
+        System.out.println("estate selectBuilding");
+        List<FcBuilding> fcBuildings = service.findBuildingByEstateCode(estateCode);
         System.out.println(fcBuildings);
         return JSON.toJSONString(new ResultObject(fcBuildings));
     }
