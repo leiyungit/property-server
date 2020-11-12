@@ -3,16 +3,16 @@ package com.msb.controller;
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.msb.bean.FcBuilding;
+import com.msb.bean.FcCell;
 import com.msb.bean.FcEstate;
+import com.msb.bean.FcUnit;
 import com.msb.resultJson.ResultObject;
 import com.msb.service.EstateService;
+import com.msb.vo.CellMessage;
 import com.msb.vo.UnitMessage;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -83,4 +83,36 @@ public class EstateController {
         return JSON.toJSONString(new ResultObject(service.selectUnit(unitMessages)));
     }
 
+    @PostMapping("/updateBatchUnit")
+    public String updateBatchUnit(@RequestBody FcUnit[] fcUnits){
+        System.out.println("updateBatchUnit..........");
+        return JSON.toJSONString(new ResultObject(service.updateBatchUnit(fcUnits)));
+    }
+
+    @PostMapping("/updateUnit")
+    public String updateUnit(FcUnit fcUnit){
+        System.out.println("updateUnit..........");
+        return JSON.toJSONString(new ResultObject(service.updateUnit(fcUnit)));
+    }
+
+    @PostMapping("/selectCell")
+    public String selectCell(@RequestBody CellMessage[] cellMessages){
+        /*System.out.println("selectCell.......");
+        for (CellMessage cellMessage : cellMessages) {
+            System.out.println(cellMessage);
+        }*/
+        return JSON.toJSONString(new ResultObject(service.selectCell(cellMessages)));
+    }
+
+    @PostMapping("/updateBatchCell")
+    public String updateBatchCell(@RequestBody FcCell[] fcCells){
+        System.out.println("updateBatchCell.........");
+        return JSON.toJSONString(new ResultObject(service.updateBatchCell(fcCells)));
+    }
+
+    @PostMapping("/updateCell")
+    public String updateCell(FcCell fcCell){
+        System.out.println("updateCell..........");
+        return JSON.toJSONString(new ResultObject(service.updateCell(fcCell)));
+    }
 }

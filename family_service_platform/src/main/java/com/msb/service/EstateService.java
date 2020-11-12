@@ -1,18 +1,14 @@
 package com.msb.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.msb.bean.FcBuilding;
-import com.msb.bean.FcEstate;
-import com.msb.bean.FcUnit;
-import com.msb.bean.TblCompany;
-import com.msb.mapper.FcBuildingMapper;
-import com.msb.mapper.FcEstateMapper;
-import com.msb.mapper.FcUnitMapper;
-import com.msb.mapper.TblCompanyMapper;
+import com.msb.bean.*;
+import com.msb.mapper.*;
+import com.msb.vo.CellMessage;
 import com.msb.vo.UnitMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +26,9 @@ public class EstateService {
 
     @Autowired
     private FcUnitMapper fcUnitMapper;
+
+    @Autowired
+    private FcCellMapper fcCellMapper;
 
     public List<TblCompany> findCompay(){
         return tblCompanyMapper.findCompany();
@@ -89,4 +88,49 @@ public class EstateService {
         }
         return list;
     }
+
+    public Integer updateUnit(FcUnit fcUnit){
+        return fcUnitMapper.updateById(fcUnit);
+    }
+
+    public Integer updateBatchUnit(FcUnit[] fcUnits){
+        Integer count = 0;
+        for (FcUnit fcUnit : fcUnits) {
+             count += fcUnitMapper.updateById(fcUnit);        }
+        return count;
+    }
+
+    public List<FcCell> selectCell(CellMessage[] cellMessages){
+        List<FcCell> list = new ArrayList<>();
+        DecimalFormat df=new DecimalFormat("00");
+        for (CellMessage cellMessage : cellMessages) {
+            // 遍历楼层
+            for (int i = cellMessage.getStartFloor(); i <= cellMessage.getStopFloor(); i++){
+                // 遍历房号
+                for (int j = cellMessage.getStartCellId(); j <= cellMessage.getStopCellId(); j++) {
+                    FcCell fcCell = new FcCell();
+                    fcCell.setUnitCode(cellMessage.getUnitCode());
+                    fcCell.setCellCode(df.format(i)+ df.format(j));
+                    fcCell.setCellName(df.format(i)+ df.format(j));
+                    fcCell.setFloorNumber(cellMessage.getStopFloor()-cellMessage.getStartFloor());
+                    fcCellMapper.insert(fcCell);
+                    list.add(fcCell);
+                }
+            }
+        }
+        return list;
+    }
+
+    public Integer updateCell(FcCell fcCell){
+        return fcCellMapper.updateById(fcCell);
+    }
+
+    public Integer updateBatchCell(FcCell[] fcCells){
+        Integer count = 0;
+        for (FcCell fcCell : fcCells) {
+            count += fcCellMapper.updateById(fcCell);
+        }
+        return count;
+    }
+
 }
