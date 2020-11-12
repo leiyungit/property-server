@@ -47,6 +47,11 @@ public class EstateService {
         return result;
     }
 
+    public List<FcEstate> findEstate(){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        return fcEstateMapper.selectList(queryWrapper);
+    }
+
     public List<FcBuilding> selectBuilding(Integer buildingNumber, String estateCode){
         List<FcBuilding> list = new ArrayList<>();
         FcBuilding fcBuilding;

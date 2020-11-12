@@ -46,6 +46,10 @@ public class EstateController {
         return JSON.toJSONString(ro);
     }
 
+    @RequestMapping("/findEstate") // @RequestBody Map<String,Object> fcBuilding
+    public String findEstate(){
+        return JSON.toJSONString(new ResultObject(service.findEstate()));
+    }
     /**
      * 添加住宅信息第二步，传入楼宇数量，页面初始化时新生成楼宇行记录，并返回
      * @param buildingNumber
