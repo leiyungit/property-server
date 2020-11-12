@@ -64,9 +64,9 @@ public class EstateController {
         return JSON.toJSONString(new ResultObject(fcBuildings));
     }
 
-    @RequestMapping("/selectBuilding")
+    @RequestMapping("/findBuildingByEstateCode")
     public String findBuildingByEstateCode(String estateCode){
-        System.out.println("estate selectBuilding");
+        System.out.println("estate findBuildingByEstateCode     " + estateCode);
         List<FcBuilding> fcBuildings = service.findBuildingByEstateCode(estateCode);
         System.out.println(fcBuildings);
         return JSON.toJSONString(new ResultObject(fcBuildings));
