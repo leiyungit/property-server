@@ -57,6 +57,6 @@ public class TestGenerator {
 
         mpg.setGlobalConfig(gc).setDataSource(dsc).setStrategy(strategy).setPackageInfo(pc);
 
-        mpg.execute();
+        // mpg.execute();
     }
 }

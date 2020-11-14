@@ -34,7 +34,7 @@ public class EstateService {
         return tblCompanyMapper.findCompany();
     }
 
-    public Integer insertEstate(FcEstate fcEstate){
+    public Integer insertSelectEstate(FcEstate fcEstate){
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("estate_code",fcEstate.getEstateCode());
         FcEstate model = fcEstateMapper.selectOne(queryWrapper);
@@ -52,10 +52,16 @@ public class EstateService {
         return fcEstateMapper.selectList(queryWrapper);
     }
 
+    public List<FcEstate> selectEstateByCompany(String company){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("company",company);
+        return fcEstateMapper.selectList(queryWrapper);
+    }
+
     public List<FcBuilding> selectInsertBuilding(Integer buildingNumber, String estateCode){
         List<FcBuilding> list = new ArrayList<>();
         FcBuilding fcBuilding;
-        for (Integer i = 0; i < buildingNumber; i++) {
+        for (Integer i = 1; i <= buildingNumber; i++) {
             fcBuilding = new FcBuilding();
             fcBuilding.setEstateCode(estateCode);
             fcBuilding.setBuildingCode(estateCode+"-"+i);
@@ -69,6 +75,19 @@ public class EstateService {
     public List<FcBuilding> findBuildingByEstateCode(String estateCode){
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("estate_code", estateCode);
+        List<FcBuilding> list = fcBuildingMapper.selectList(queryWrapper);
+        return list;
+    }
+
+    /**
+     * 下拉数据源
+     * @param estateCode
+     * @return
+     */
+    public List<FcBuilding> findSelectBuildingByEstateCode(String estateCode){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("estate_code", estateCode);
+        queryWrapper.select("building_code", "building_name");
         List<FcBuilding> list = fcBuildingMapper.selectList(queryWrapper);
         return list;
     }
@@ -92,7 +111,7 @@ public class EstateService {
             for (int i = 1; i <= unitMessage.getUnitCount(); i++){
                 FcUnit fcUnit = new FcUnit();
                 fcUnit.setBuildingCode(unitMessage.getBuildingCode());
-                fcUnit.setUnitCode("U-"+i);
+                fcUnit.setUnitCode(unitMessage.getBuildingCode()+"-"+i);
                 fcUnit.setUnitName("第"+ i + "单元");
                 fcUnitMapper.insert(fcUnit);
                 list.add(fcUnit);
@@ -100,6 +119,15 @@ public class EstateService {
         }
         return list;
     }
+
+    public List<FcUnit> findUnitByBuildingCode(String buildingCode){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("building_code", buildingCode);
+        queryWrapper.select("unit_code", "unit_name");
+        List<FcUnit> list = fcUnitMapper.selectList(queryWrapper);
+        return list;
+    }
+
 
     public Integer updateUnit(FcUnit fcUnit){
         return fcUnitMapper.updateById(fcUnit);
@@ -112,7 +140,15 @@ public class EstateService {
         return count;
     }
 
-    public List<FcCell> selectCell(CellMessage[] cellMessages){
+    //
+    public List<FcCell> findCellByUnitCode(String unitCode){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("unit_code", unitCode);
+        List<FcCell> list = fcCellMapper.selectList(queryWrapper);
+        return list;
+    }
+
+    public List<FcCell> insertSelectCell(CellMessage[] cellMessages){
         List<FcCell> list = new ArrayList<>();
         DecimalFormat df=new DecimalFormat("00");
         for (CellMessage cellMessage : cellMessages) {
@@ -122,9 +158,9 @@ public class EstateService {
                 for (int j = cellMessage.getStartCellId(); j <= cellMessage.getStopCellId(); j++) {
                     FcCell fcCell = new FcCell();
                     fcCell.setUnitCode(cellMessage.getUnitCode());
-                    fcCell.setCellCode(df.format(i)+ df.format(j));
+                    fcCell.setCellCode(cellMessage.getUnitCode()+"-"+df.format(i)+ df.format(j));
                     fcCell.setCellName(df.format(i)+ df.format(j));
-                    fcCell.setFloorNumber(cellMessage.getStopFloor()-cellMessage.getStartFloor());
+                    fcCell.setFloorNumber(i);
                     fcCellMapper.insert(fcCell);
                     list.add(fcCell);
                 }

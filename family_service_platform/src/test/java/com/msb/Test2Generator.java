@@ -47,6 +47,6 @@ class Test2Generator {
         autoGenerator.setGlobalConfig(globalConfig).setDataSource(dataSourceConfig)
                 .setStrategy(strategyConfig).setPackageInfo(packageConfig);
 
-        autoGenerator.execute();
+        // autoGenerator.execute();
     }
 }
